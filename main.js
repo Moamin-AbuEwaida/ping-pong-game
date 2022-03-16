@@ -59,7 +59,7 @@ function drawCircle(x, y, r, color){
 // the text
 function drawText(text, x, y, color){
     ctx.fillStyle=color;
-    ctx.font="45px Roboto Mono";
+    ctx.font="25px Fredoka";
     ctx.fillText(text, x, y);
 };
 // the net
@@ -76,6 +76,8 @@ function render(){
     //draw the net
     drawNet(cvs.width, cvs.height, 'black');
     //draw the score
+    drawText('Player', (cvs.width/4)-25, (cvs.height/5)- 30, 'white');
+    drawText('Computer', (3*cvs.width/4)-50, (cvs.height/5) -30, 'white');
     drawText(user.score, cvs.width/4, cvs.height/5, 'white');
     drawText(comp.score, 3*cvs.width/4, cvs.height/5, 'white');
     //draw the paddles
